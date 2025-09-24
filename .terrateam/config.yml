@@ -1,0 +1,26 @@
+# Basic Terrateam configuration
+access_control:
+  policies:
+    - tag_query: ''  # All directories and workspaces
+      plan: ['*']    # Anyone can plan
+      apply: ['*']  # Anyone can apply
+
+apply_requirements:
+  create_pending_apply_check: true
+  checks:
+    - tag_query: ""  # All directories
+      approved:
+        enabled: false
+
+dirs:
+  dev:
+    tags: [dev]
+    workspaces:
+      default:
+        tags: [default]
+
+hooks:
+  all:
+    pre:
+      - type: run
+        cmd: ['echo', 'Starting Terraform operation']
