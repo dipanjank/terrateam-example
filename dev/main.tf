@@ -7,7 +7,7 @@ module "my_ec2" {
   security_group_ids = ["sg-01c4b7a6f6f333b4b"]
   tags = {
     Environment = "dev"
-    Owner       = "team-a"
+    Owner       = "team-A"
   }
 }
 
