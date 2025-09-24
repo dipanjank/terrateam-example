@@ -1,4 +1,8 @@
 # Basic Terrateam configuration
+
+when_modified:
+  autoapply: true # auto apply on merge to main
+
 access_control:
   policies:
     - tag_query: ''  # All directories and workspaces
